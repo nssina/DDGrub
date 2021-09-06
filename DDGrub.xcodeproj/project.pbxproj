@@ -11,6 +11,7 @@
 		D33C80DC26E5E47F00905A03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80DB26E5E47F00905A03 /* ContentView.swift */; };
 		D33C80DE26E5E48100905A03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33C80DD26E5E48100905A03 /* Assets.xcassets */; };
 		D33C80E126E5E48100905A03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33C80E026E5E48100905A03 /* Preview Assets.xcassets */; };
+		D33C80EB26E5E61500905A03 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33C80EA26E5E61500905A03 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,8 @@
 		D33C80DD26E5E48100905A03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D33C80E026E5E48100905A03 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D33C80E226E5E48100905A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D33C80E826E5E5EF00905A03 /* DDGrub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DDGrub.entitlements; sourceTree = "<group>"; };
+		D33C80EA26E5E61500905A03 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33C80EB26E5E61500905A03 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +42,7 @@
 			children = (
 				D33C80D826E5E47F00905A03 /* DDGrub */,
 				D33C80D726E5E47F00905A03 /* Products */,
+				D33C80E926E5E61500905A03 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +57,7 @@
 		D33C80D826E5E47F00905A03 /* DDGrub */ = {
 			isa = PBXGroup;
 			children = (
+				D33C80E826E5E5EF00905A03 /* DDGrub.entitlements */,
 				D33C80D926E5E47F00905A03 /* DDGrubApp.swift */,
 				D33C80DB26E5E47F00905A03 /* ContentView.swift */,
 				D33C80DD26E5E48100905A03 /* Assets.xcassets */,
@@ -67,6 +73,14 @@
 				D33C80E026E5E48100905A03 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D33C80E926E5E61500905A03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D33C80EA26E5E61500905A03 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +281,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
+				DEVELOPMENT_TEAM = R24M5ZBA3L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DDGrub/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -288,8 +304,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
+				DEVELOPMENT_TEAM = R24M5ZBA3L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DDGrub/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
