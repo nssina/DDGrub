@@ -12,6 +12,7 @@
 		D33C80DE26E5E48100905A03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33C80DD26E5E48100905A03 /* Assets.xcassets */; };
 		D33C80E126E5E48100905A03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33C80E026E5E48100905A03 /* Preview Assets.xcassets */; };
 		D33C80EB26E5E61500905A03 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33C80EA26E5E61500905A03 /* CloudKit.framework */; };
+		D33C80ED26E5E9A400905A03 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80EC26E5E9A400905A03 /* Color+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		D33C80E226E5E48100905A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D33C80E826E5E5EF00905A03 /* DDGrub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DDGrub.entitlements; sourceTree = "<group>"; };
 		D33C80EA26E5E61500905A03 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		D33C80EC26E5E9A400905A03 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				D33C80DD26E5E48100905A03 /* Assets.xcassets */,
 				D33C80E226E5E48100905A03 /* Info.plist */,
 				D33C80DF26E5E48100905A03 /* Preview Content */,
+				D33C80EC26E5E9A400905A03 /* Color+Ext.swift */,
 			);
 			path = DDGrub;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				D33C80DC26E5E47F00905A03 /* ContentView.swift in Sources */,
 				D33C80DA26E5E47F00905A03 /* DDGrubApp.swift in Sources */,
+				D33C80ED26E5E9A400905A03 /* Color+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +287,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = R24M5ZBA3L;
 				ENABLE_PREVIEWS = YES;
@@ -306,6 +311,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = R24M5ZBA3L;
 				ENABLE_PREVIEWS = YES;
