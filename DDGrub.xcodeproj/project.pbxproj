@@ -8,23 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		D33C80DA26E5E47F00905A03 /* DDGrubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80D926E5E47F00905A03 /* DDGrubApp.swift */; };
-		D33C80DC26E5E47F00905A03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80DB26E5E47F00905A03 /* ContentView.swift */; };
 		D33C80DE26E5E48100905A03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33C80DD26E5E48100905A03 /* Assets.xcassets */; };
 		D33C80E126E5E48100905A03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33C80E026E5E48100905A03 /* Preview Assets.xcassets */; };
 		D33C80EB26E5E61500905A03 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33C80EA26E5E61500905A03 /* CloudKit.framework */; };
 		D33C80ED26E5E9A400905A03 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80EC26E5E9A400905A03 /* Color+Ext.swift */; };
+		D33C80EF26E5EA2700905A03 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80EE26E5EA2700905A03 /* AppTabView.swift */; };
+		D33C80F126E5EA6200905A03 /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80F026E5EA6200905A03 /* LocationMapView.swift */; };
+		D33C80F326E5EA7F00905A03 /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80F226E5EA7F00905A03 /* LocationListView.swift */; };
+		D33C80F526E5EA8F00905A03 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80F426E5EA8F00905A03 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D33C80D626E5E47F00905A03 /* DDGrub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDGrub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33C80D926E5E47F00905A03 /* DDGrubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGrubApp.swift; sourceTree = "<group>"; };
-		D33C80DB26E5E47F00905A03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D33C80DD26E5E48100905A03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D33C80E026E5E48100905A03 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D33C80E226E5E48100905A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D33C80E826E5E5EF00905A03 /* DDGrub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DDGrub.entitlements; sourceTree = "<group>"; };
 		D33C80EA26E5E61500905A03 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D33C80EC26E5E9A400905A03 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		D33C80EE26E5EA2700905A03 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		D33C80F026E5EA6200905A03 /* LocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapView.swift; sourceTree = "<group>"; };
+		D33C80F226E5EA7F00905A03 /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
+		D33C80F426E5EA8F00905A03 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +67,10 @@
 			children = (
 				D33C80E826E5E5EF00905A03 /* DDGrub.entitlements */,
 				D33C80D926E5E47F00905A03 /* DDGrubApp.swift */,
-				D33C80DB26E5E47F00905A03 /* ContentView.swift */,
+				D33C80EE26E5EA2700905A03 /* AppTabView.swift */,
+				D33C80F026E5EA6200905A03 /* LocationMapView.swift */,
+				D33C80F226E5EA7F00905A03 /* LocationListView.swift */,
+				D33C80F426E5EA8F00905A03 /* ProfileView.swift */,
 				D33C80DD26E5E48100905A03 /* Assets.xcassets */,
 				D33C80E226E5E48100905A03 /* Info.plist */,
 				D33C80DF26E5E48100905A03 /* Preview Content */,
@@ -155,8 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D33C80DC26E5E47F00905A03 /* ContentView.swift in Sources */,
 				D33C80DA26E5E47F00905A03 /* DDGrubApp.swift in Sources */,
+				D33C80F126E5EA6200905A03 /* LocationMapView.swift in Sources */,
+				D33C80F326E5EA7F00905A03 /* LocationListView.swift in Sources */,
+				D33C80EF26E5EA2700905A03 /* AppTabView.swift in Sources */,
+				D33C80F526E5EA8F00905A03 /* ProfileView.swift in Sources */,
 				D33C80ED26E5E9A400905A03 /* Color+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +299,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = R24M5ZBA3L;
 				ENABLE_PREVIEWS = YES;
@@ -311,7 +323,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = R24M5ZBA3L;
 				ENABLE_PREVIEWS = YES;
