@@ -77,22 +77,13 @@
 		D33C80D826E5E47F00905A03 /* DDGrub */ = {
 			isa = PBXGroup;
 			children = (
+				D3F3319A2718909F000628AD /* Extensions */,
+				D3F3319B271890B3000628AD /* Views */,
 				D33C80E826E5E5EF00905A03 /* DDGrub.entitlements */,
 				D33C80D926E5E47F00905A03 /* DDGrubApp.swift */,
-				D33C80EE26E5EA2700905A03 /* AppTabView.swift */,
-				D33C80F026E5EA6200905A03 /* LocationMapView.swift */,
-				D33C80F226E5EA7F00905A03 /* LocationListView.swift */,
-				D3F331922718881C000628AD /* AvatarView.swift */,
-				D3F33190271887F7000628AD /* LocationCell.swift */,
-				D3FF3927271864F3004ECD0A /* LocationDetailView.swift */,
-				D33C80F426E5EA8F00905A03 /* ProfileView.swift */,
-				D3F3319827188DE3000628AD /* DDGButton.swift */,
-				D3F3319427188D05000628AD /* CustomModifires.swift */,
-				D3F3319627188D2B000628AD /* View+Ext.swift */,
 				D33C80DD26E5E48100905A03 /* Assets.xcassets */,
 				D33C80E226E5E48100905A03 /* Info.plist */,
 				D33C80DF26E5E48100905A03 /* Preview Content */,
-				D33C80EC26E5E9A400905A03 /* Color+Ext.swift */,
 			);
 			path = DDGrub;
 			sourceTree = "<group>";
@@ -111,6 +102,55 @@
 				D33C80EA26E5E61500905A03 /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3F3319A2718909F000628AD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D3F3319627188D2B000628AD /* View+Ext.swift */,
+				D33C80EC26E5E9A400905A03 /* Color+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D3F3319B271890B3000628AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3F3319427188D05000628AD /* CustomModifires.swift */,
+				D3F3319E271890FF000628AD /* Custom Views */,
+				D3F3319D271890F9000628AD /* Cells */,
+				D3F3319C271890BE000628AD /* Screens */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D3F3319C271890BE000628AD /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D33C80EE26E5EA2700905A03 /* AppTabView.swift */,
+				D33C80F026E5EA6200905A03 /* LocationMapView.swift */,
+				D33C80F226E5EA7F00905A03 /* LocationListView.swift */,
+				D3FF3927271864F3004ECD0A /* LocationDetailView.swift */,
+				D33C80F426E5EA8F00905A03 /* ProfileView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D3F3319D271890F9000628AD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D3F33190271887F7000628AD /* LocationCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D3F3319E271890FF000628AD /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3F331922718881C000628AD /* AvatarView.swift */,
+				D3F3319827188DE3000628AD /* DDGButton.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,7 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = G5MW59W3Y4;
 				ENABLE_PREVIEWS = YES;
@@ -347,7 +387,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = G5MW59W3Y4;
 				ENABLE_PREVIEWS = YES;
