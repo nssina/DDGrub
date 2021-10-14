@@ -18,6 +18,9 @@
 		D33C80F526E5EA8F00905A03 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80F426E5EA8F00905A03 /* ProfileView.swift */; };
 		D3F33191271887F7000628AD /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F33190271887F7000628AD /* LocationCell.swift */; };
 		D3F331932718881C000628AD /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F331922718881C000628AD /* AvatarView.swift */; };
+		D3F3319527188D05000628AD /* CustomModifires.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3319427188D05000628AD /* CustomModifires.swift */; };
+		D3F3319727188D2B000628AD /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3319627188D2B000628AD /* View+Ext.swift */; };
+		D3F3319927188DE3000628AD /* DDGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3319827188DE3000628AD /* DDGButton.swift */; };
 		D3FF3928271864F3004ECD0A /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF3927271864F3004ECD0A /* LocationDetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,9 @@
 		D33C80F426E5EA8F00905A03 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D3F33190271887F7000628AD /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		D3F331922718881C000628AD /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		D3F3319427188D05000628AD /* CustomModifires.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifires.swift; sourceTree = "<group>"; };
+		D3F3319627188D2B000628AD /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		D3F3319827188DE3000628AD /* DDGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGButton.swift; sourceTree = "<group>"; };
 		D3FF3927271864F3004ECD0A /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +86,9 @@
 				D3F33190271887F7000628AD /* LocationCell.swift */,
 				D3FF3927271864F3004ECD0A /* LocationDetailView.swift */,
 				D33C80F426E5EA8F00905A03 /* ProfileView.swift */,
+				D3F3319827188DE3000628AD /* DDGButton.swift */,
+				D3F3319427188D05000628AD /* CustomModifires.swift */,
+				D3F3319627188D2B000628AD /* View+Ext.swift */,
 				D33C80DD26E5E48100905A03 /* Assets.xcassets */,
 				D33C80E226E5E48100905A03 /* Info.plist */,
 				D33C80DF26E5E48100905A03 /* Preview Content */,
@@ -176,10 +185,13 @@
 				D33C80DA26E5E47F00905A03 /* DDGrubApp.swift in Sources */,
 				D33C80F126E5EA6200905A03 /* LocationMapView.swift in Sources */,
 				D33C80F326E5EA7F00905A03 /* LocationListView.swift in Sources */,
+				D3F3319527188D05000628AD /* CustomModifires.swift in Sources */,
 				D3FF3928271864F3004ECD0A /* LocationDetailView.swift in Sources */,
 				D33C80EF26E5EA2700905A03 /* AppTabView.swift in Sources */,
 				D33C80F526E5EA8F00905A03 /* ProfileView.swift in Sources */,
+				D3F3319727188D2B000628AD /* View+Ext.swift in Sources */,
 				D3F33191271887F7000628AD /* LocationCell.swift in Sources */,
+				D3F3319927188DE3000628AD /* DDGButton.swift in Sources */,
 				D3F331932718881C000628AD /* AvatarView.swift in Sources */,
 				D33C80ED26E5E9A400905A03 /* Color+Ext.swift in Sources */,
 			);
@@ -311,7 +323,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = G5MW59W3Y4;
 				ENABLE_PREVIEWS = YES;
@@ -335,7 +347,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = G5MW59W3Y4;
 				ENABLE_PREVIEWS = YES;
