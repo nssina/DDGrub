@@ -16,6 +16,7 @@
 		D33C80F126E5EA6200905A03 /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80F026E5EA6200905A03 /* LocationMapView.swift */; };
 		D33C80F326E5EA7F00905A03 /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80F226E5EA7F00905A03 /* LocationListView.swift */; };
 		D33C80F526E5EA8F00905A03 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80F426E5EA8F00905A03 /* ProfileView.swift */; };
+		D3FF3928271864F3004ECD0A /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF3927271864F3004ECD0A /* LocationDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		D33C80F026E5EA6200905A03 /* LocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapView.swift; sourceTree = "<group>"; };
 		D33C80F226E5EA7F00905A03 /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 		D33C80F426E5EA8F00905A03 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D3FF3927271864F3004ECD0A /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				D33C80EE26E5EA2700905A03 /* AppTabView.swift */,
 				D33C80F026E5EA6200905A03 /* LocationMapView.swift */,
 				D33C80F226E5EA7F00905A03 /* LocationListView.swift */,
+				D3FF3927271864F3004ECD0A /* LocationDetailView.swift */,
 				D33C80F426E5EA8F00905A03 /* ProfileView.swift */,
 				D33C80DD26E5E48100905A03 /* Assets.xcassets */,
 				D33C80E226E5E48100905A03 /* Info.plist */,
@@ -167,6 +170,7 @@
 				D33C80DA26E5E47F00905A03 /* DDGrubApp.swift in Sources */,
 				D33C80F126E5EA6200905A03 /* LocationMapView.swift in Sources */,
 				D33C80F326E5EA7F00905A03 /* LocationListView.swift in Sources */,
+				D3FF3928271864F3004ECD0A /* LocationDetailView.swift in Sources */,
 				D33C80EF26E5EA2700905A03 /* AppTabView.swift in Sources */,
 				D33C80F526E5EA8F00905A03 /* ProfileView.swift in Sources */,
 				D33C80ED26E5E9A400905A03 /* Color+Ext.swift in Sources */,
@@ -299,7 +303,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = R24M5ZBA3L;
 				ENABLE_PREVIEWS = YES;
@@ -323,7 +327,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = R24M5ZBA3L;
 				ENABLE_PREVIEWS = YES;
