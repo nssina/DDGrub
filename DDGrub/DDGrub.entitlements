@@ -6,7 +6,7 @@
 	<string>development</string>
 	<key>com.apple.developer.icloud-container-identifiers</key>
 	<array>
-		<string>iCloud.com.DDGrub</string>
+		<string>iCloud.com.DDGrub.dev</string>
 	</array>
 	<key>com.apple.developer.icloud-services</key>
 	<array>
