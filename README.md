@@ -1,2 +1,2 @@
 # DDGrub
-DDGrub is a SwiftUI app developed with MVVM
+DDGrub is a SwiftUI app developed with MVVM and CoreData
