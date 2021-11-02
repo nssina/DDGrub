@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D338CFA52731CB2500DA4CCA /* DDGLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338CFA42731CB2500DA4CCA /* DDGLocation.swift */; };
+		D338CFA72731CF0200DA4CCA /* DDGProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338CFA62731CF0200DA4CCA /* DDGProfile.swift */; };
 		D33C80DA26E5E47F00905A03 /* DDGrubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80D926E5E47F00905A03 /* DDGrubApp.swift */; };
 		D33C80DE26E5E48100905A03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33C80DD26E5E48100905A03 /* Assets.xcassets */; };
 		D33C80E126E5E48100905A03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33C80E026E5E48100905A03 /* Preview Assets.xcassets */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		D338CFA42731CB2500DA4CCA /* DDGLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGLocation.swift; sourceTree = "<group>"; };
+		D338CFA62731CF0200DA4CCA /* DDGProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGProfile.swift; sourceTree = "<group>"; };
 		D33C80D626E5E47F00905A03 /* DDGrub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDGrub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33C80D926E5E47F00905A03 /* DDGrubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGrubApp.swift; sourceTree = "<group>"; };
 		D33C80DD26E5E48100905A03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				D338CFA42731CB2500DA4CCA /* DDGLocation.swift */,
+				D338CFA62731CF0200DA4CCA /* DDGProfile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				D33C80F326E5EA7F00905A03 /* LocationListView.swift in Sources */,
 				D3F3319527188D05000628AD /* CustomModifires.swift in Sources */,
 				D3FF3928271864F3004ECD0A /* LocationDetailView.swift in Sources */,
+				D338CFA72731CF0200DA4CCA /* DDGProfile.swift in Sources */,
 				D338CFA52731CB2500DA4CCA /* DDGLocation.swift in Sources */,
 				D33C80EF26E5EA2700905A03 /* AppTabView.swift in Sources */,
 				D33C80F526E5EA8F00905A03 /* ProfileView.swift in Sources */,
