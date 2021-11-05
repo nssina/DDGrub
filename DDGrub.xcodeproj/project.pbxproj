@@ -14,6 +14,7 @@
 		D33A450D27356F5200A1854B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33A450C27356F5200A1854B /* Constants.swift */; };
 		D33A450F2735725000A1854B /* CKRecord+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33A450E2735725000A1854B /* CKRecord+Ext.swift */; };
 		D33A451127357F2C00A1854B /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33A451027357F2C00A1854B /* AlertItem.swift */; };
+		D33A4514273583B100A1854B /* LocationMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33A4513273583B100A1854B /* LocationMapViewModel.swift */; };
 		D33C80DA26E5E47F00905A03 /* DDGrubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80D926E5E47F00905A03 /* DDGrubApp.swift */; };
 		D33C80DE26E5E48100905A03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33C80DD26E5E48100905A03 /* Assets.xcassets */; };
 		D33C80E126E5E48100905A03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33C80E026E5E48100905A03 /* Preview Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		D33A450C27356F5200A1854B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D33A450E2735725000A1854B /* CKRecord+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKRecord+Ext.swift"; sourceTree = "<group>"; };
 		D33A451027357F2C00A1854B /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
+		D33A4513273583B100A1854B /* LocationMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapViewModel.swift; sourceTree = "<group>"; };
 		D33C80D626E5E47F00905A03 /* DDGrub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDGrub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33C80D926E5E47F00905A03 /* DDGrubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGrubApp.swift; sourceTree = "<group>"; };
 		D33C80DD26E5E48100905A03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +91,15 @@
 				D33A451027357F2C00A1854B /* AlertItem.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D33A45122735838600A1854B /* LocationMapView */ = {
+			isa = PBXGroup;
+			children = (
+				D33C80F026E5EA6200905A03 /* LocationMapView.swift */,
+				D33A4513273583B100A1854B /* LocationMapViewModel.swift */,
+			);
+			path = LocationMapView;
 			sourceTree = "<group>";
 		};
 		D33C80CD26E5E47F00905A03 = {
@@ -164,8 +175,8 @@
 		D3F3319C271890BE000628AD /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D33A45122735838600A1854B /* LocationMapView */,
 				D33C80EE26E5EA2700905A03 /* AppTabView.swift */,
-				D33C80F026E5EA6200905A03 /* LocationMapView.swift */,
 				D33C80F226E5EA7F00905A03 /* LocationListView.swift */,
 				D3FF3927271864F3004ECD0A /* LocationDetailView.swift */,
 				D33C80F426E5EA8F00905A03 /* ProfileView.swift */,
@@ -263,6 +274,7 @@
 				D33A450D27356F5200A1854B /* Constants.swift in Sources */,
 				D33C80F126E5EA6200905A03 /* LocationMapView.swift in Sources */,
 				D33C80F326E5EA7F00905A03 /* LocationListView.swift in Sources */,
+				D33A4514273583B100A1854B /* LocationMapViewModel.swift in Sources */,
 				D3F3319527188D05000628AD /* CustomModifires.swift in Sources */,
 				D338CFA92731D08F00DA4CCA /* MockData.swift in Sources */,
 				D3FF3928271864F3004ECD0A /* LocationDetailView.swift in Sources */,
@@ -407,7 +419,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 33;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = G5MW59W3Y4;
 				ENABLE_PREVIEWS = YES;
@@ -431,7 +443,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 33;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = G5MW59W3Y4;
 				ENABLE_PREVIEWS = YES;
