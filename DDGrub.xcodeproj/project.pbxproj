@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D304E48127397CD9004D70C5 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304E48027397CD9004D70C5 /* LocationManager.swift */; };
 		D338CFA52731CB2500DA4CCA /* DDGLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338CFA42731CB2500DA4CCA /* DDGLocation.swift */; };
 		D338CFA72731CF0200DA4CCA /* DDGProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338CFA62731CF0200DA4CCA /* DDGProfile.swift */; };
 		D338CFA92731D08F00DA4CCA /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338CFA82731D08F00DA4CCA /* MockData.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D304E48027397CD9004D70C5 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D338CFA42731CB2500DA4CCA /* DDGLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGLocation.swift; sourceTree = "<group>"; };
 		D338CFA62731CF0200DA4CCA /* DDGProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGProfile.swift; sourceTree = "<group>"; };
 		D338CFA82731D08F00DA4CCA /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
@@ -73,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D304E47F27397CB7004D70C5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D33A450A27356B3F00A1854B /* CloudKitManager.swift */,
+				D304E48027397CD9004D70C5 /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		D338CFA32731CB1900DA4CCA /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +97,7 @@
 		D33A450827356B0400A1854B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				D33A450A27356B3F00A1854B /* CloudKitManager.swift */,
+				D304E47F27397CB7004D70C5 /* Managers */,
 				D33A450C27356F5200A1854B /* Constants.swift */,
 				D33A451027357F2C00A1854B /* AlertItem.swift */,
 			);
@@ -287,6 +298,7 @@
 				D3F3319727188D2B000628AD /* View+Ext.swift in Sources */,
 				D3F33191271887F7000628AD /* LocationCell.swift in Sources */,
 				D33A450F2735725000A1854B /* CKRecord+Ext.swift in Sources */,
+				D304E48127397CD9004D70C5 /* LocationManager.swift in Sources */,
 				D3F3319927188DE3000628AD /* DDGButton.swift in Sources */,
 				D3F331932718881C000628AD /* AvatarView.swift in Sources */,
 				D33C80ED26E5E9A400905A03 /* Color+Ext.swift in Sources */,
@@ -419,7 +431,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 34;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = G5MW59W3Y4;
 				ENABLE_PREVIEWS = YES;
@@ -443,7 +455,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 34;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = G5MW59W3Y4;
 				ENABLE_PREVIEWS = YES;
