@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D304E48127397CD9004D70C5 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304E48027397CD9004D70C5 /* LocationManager.swift */; };
 		D304E48327398953004D70C5 /* CKAsset+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304E48227398953004D70C5 /* CKAsset+Ext.swift */; };
+		D304E4852739A01F004D70C5 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304E4842739A01F004D70C5 /* OnboardView.swift */; };
+		D304E4872739A05D004D70C5 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304E4862739A05D004D70C5 /* LogoView.swift */; };
+		D304E48A2739A771004D70C5 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304E4892739A771004D70C5 /* XDismissButton.swift */; };
 		D338CFA52731CB2500DA4CCA /* DDGLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338CFA42731CB2500DA4CCA /* DDGLocation.swift */; };
 		D338CFA72731CF0200DA4CCA /* DDGProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338CFA62731CF0200DA4CCA /* DDGProfile.swift */; };
 		D338CFA92731D08F00DA4CCA /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338CFA82731D08F00DA4CCA /* MockData.swift */; };
@@ -37,6 +40,9 @@
 /* Begin PBXFileReference section */
 		D304E48027397CD9004D70C5 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D304E48227398953004D70C5 /* CKAsset+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKAsset+Ext.swift"; sourceTree = "<group>"; };
+		D304E4842739A01F004D70C5 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
+		D304E4862739A05D004D70C5 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		D304E4892739A771004D70C5 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		D338CFA42731CB2500DA4CCA /* DDGLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGLocation.swift; sourceTree = "<group>"; };
 		D338CFA62731CF0200DA4CCA /* DDGProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGProfile.swift; sourceTree = "<group>"; };
 		D338CFA82731D08F00DA4CCA /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
@@ -84,6 +90,15 @@
 				D304E48027397CD9004D70C5 /* LocationManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		D304E4882739A763004D70C5 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				D3F3319827188DE3000628AD /* DDGButton.swift */,
+				D304E4892739A771004D70C5 /* XDismissButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		D338CFA32731CB1900DA4CCA /* Model */ = {
@@ -194,6 +209,7 @@
 				D33C80F226E5EA7F00905A03 /* LocationListView.swift */,
 				D3FF3927271864F3004ECD0A /* LocationDetailView.swift */,
 				D33C80F426E5EA8F00905A03 /* ProfileView.swift */,
+				D304E4842739A01F004D70C5 /* OnboardView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -209,8 +225,9 @@
 		D3F3319E271890FF000628AD /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				D304E4882739A763004D70C5 /* Buttons */,
 				D3F331922718881C000628AD /* AvatarView.swift */,
-				D3F3319827188DE3000628AD /* DDGButton.swift */,
+				D304E4862739A05D004D70C5 /* LogoView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -297,12 +314,15 @@
 				D33C80EF26E5EA2700905A03 /* AppTabView.swift in Sources */,
 				D33C80F526E5EA8F00905A03 /* ProfileView.swift in Sources */,
 				D33A450B27356B3F00A1854B /* CloudKitManager.swift in Sources */,
+				D304E4872739A05D004D70C5 /* LogoView.swift in Sources */,
+				D304E48A2739A771004D70C5 /* XDismissButton.swift in Sources */,
 				D33A451127357F2C00A1854B /* AlertItem.swift in Sources */,
 				D3F3319727188D2B000628AD /* View+Ext.swift in Sources */,
 				D3F33191271887F7000628AD /* LocationCell.swift in Sources */,
 				D33A450F2735725000A1854B /* CKRecord+Ext.swift in Sources */,
 				D304E48127397CD9004D70C5 /* LocationManager.swift in Sources */,
 				D304E48327398953004D70C5 /* CKAsset+Ext.swift in Sources */,
+				D304E4852739A01F004D70C5 /* OnboardView.swift in Sources */,
 				D3F3319927188DE3000628AD /* DDGButton.swift in Sources */,
 				D3F331932718881C000628AD /* AvatarView.swift in Sources */,
 				D33C80ED26E5E9A400905A03 /* Color+Ext.swift in Sources */,
@@ -435,7 +455,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 47;
+				CURRENT_PROJECT_VERSION = 48;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = G5MW59W3Y4;
 				ENABLE_PREVIEWS = YES;
@@ -459,7 +479,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 47;
+				CURRENT_PROJECT_VERSION = 48;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = G5MW59W3Y4;
 				ENABLE_PREVIEWS = YES;
