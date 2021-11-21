@@ -7,9 +7,34 @@
 
 import CloudKit
 
-struct CloudKitManager {
+final class CloudKitManager {
     
-    static func getLocations(complited: @escaping (Result<[DDGLocation], Error>) -> Void) {
+    static let shared = CloudKitManager()
+    
+    private init() {}
+    
+    var userRecord: CKRecord?
+    
+    func getUserRecord() {
+        CKContainer.default().fetchUserRecordID { recordID, error in
+            guard let recordID = recordID, error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            
+            CKContainer.default().publicCloudDatabase.fetch(withRecordID: recordID) { userRecord, error in
+                guard let userRecord = userRecord, error == nil else {
+                    print(error!.localizedDescription)
+                    return
+                }
+                
+                self.userRecord = userRecord
+            }
+        }
+    }
+    
+    func getLocations(complited: @escaping (Result<[DDGLocation], Error>) -> Void) {
+        
         let sortDescriptor = NSSortDescriptor(key: DDGLocation.kName, ascending: true)
         let query = CKQuery(recordType: RecordType.location, predicate: NSPredicate(value: true))
         query.sortDescriptors = [sortDescriptor]
@@ -25,6 +50,32 @@ struct CloudKitManager {
             let locations = records.map { $0.convertToDDGLocation() }
             
             complited(.success(locations))
+        }
+    }
+    
+    func batchSave(records: [CKRecord], compledted: @escaping(Result<[CKRecord], Error>) -> Void) {
+        
+        let operation = CKModifyRecordsOperation(recordsToSave: records)
+        operation.modifyRecordsCompletionBlock = { savedRecords, _, error in
+            guard let savedRecords = savedRecords, error == nil else {
+                compledted(.failure(error!))
+                return
+            }
+            
+            compledted(.success(savedRecords))
+        }
+        
+        CKContainer.default().publicCloudDatabase.add(operation)
+    }
+    
+    func fetchRecord(with id: CKRecord.ID, compledted: @escaping(Result<CKRecord, Error>) -> Void) {
+        CKContainer.default().publicCloudDatabase.fetch(withRecordID: id) { record, error in
+            guard let record = record, error == nil else {
+                compledted(.failure(error!))
+                return
+            }
+            
+            compledted(.success(record))
         }
     }
 }
