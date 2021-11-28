@@ -33,6 +33,7 @@
 		D33C80F526E5EA8F00905A03 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80F426E5EA8F00905A03 /* ProfileView.swift */; };
 		D3632B5F27495C59005A7F55 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3632B5E27495C59005A7F55 /* PhotoPicker.swift */; };
 		D3DA4C9D275364C600461E00 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA4C9C275364C600461E00 /* LoadingView.swift */; };
+		D3DA4CA027537EC900461E00 /* LocationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA4C9F27537EC900461E00 /* LocationDetailViewModel.swift */; };
 		D3F33191271887F7000628AD /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F33190271887F7000628AD /* LocationCell.swift */; };
 		D3F331932718881C000628AD /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F331922718881C000628AD /* AvatarView.swift */; };
 		D3F3319527188D05000628AD /* CustomModifires.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3319427188D05000628AD /* CustomModifires.swift */; };
@@ -71,6 +72,7 @@
 		D33C80F426E5EA8F00905A03 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D3632B5E27495C59005A7F55 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		D3DA4C9C275364C600461E00 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		D3DA4C9F27537EC900461E00 /* LocationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewModel.swift; sourceTree = "<group>"; };
 		D3F33190271887F7000628AD /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		D3F331922718881C000628AD /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		D3F3319427188D05000628AD /* CustomModifires.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifires.swift; sourceTree = "<group>"; };
@@ -204,6 +206,15 @@
 			path = "UIKit Components";
 			sourceTree = "<group>";
 		};
+		D3DA4C9E27537EB600461E00 /* LocationDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				D3FF3927271864F3004ECD0A /* LocationDetailView.swift */,
+				D3DA4C9F27537EC900461E00 /* LocationDetailViewModel.swift */,
+			);
+			path = LocationDetailView;
+			sourceTree = "<group>";
+		};
 		D3F3319A2718909F000628AD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,10 +241,10 @@
 		D3F3319C271890BE000628AD /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D3DA4C9E27537EB600461E00 /* LocationDetailView */,
 				D33A45122735838600A1854B /* LocationMapView */,
 				D33C80EE26E5EA2700905A03 /* AppTabView.swift */,
 				D33C80F226E5EA7F00905A03 /* LocationListView.swift */,
-				D3FF3927271864F3004ECD0A /* LocationDetailView.swift */,
 				D335EB26274A96020063D840 /* ProfileView */,
 				D304E4842739A01F004D70C5 /* OnboardView.swift */,
 			);
@@ -333,6 +344,7 @@
 				D33A450D27356F5200A1854B /* Constants.swift in Sources */,
 				D33C80F126E5EA6200905A03 /* LocationMapView.swift in Sources */,
 				D33C80F326E5EA7F00905A03 /* LocationListView.swift in Sources */,
+				D3DA4CA027537EC900461E00 /* LocationDetailViewModel.swift in Sources */,
 				D33A4514273583B100A1854B /* LocationMapViewModel.swift in Sources */,
 				D3F3319527188D05000628AD /* CustomModifires.swift in Sources */,
 				D335EB28274A96220063D840 /* ProfileViewModel.swift in Sources */,
@@ -487,7 +499,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 64;
+				CURRENT_PROJECT_VERSION = 65;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = G5MW59W3Y4;
 				ENABLE_PREVIEWS = YES;
@@ -511,7 +523,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 64;
+				CURRENT_PROJECT_VERSION = 65;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = G5MW59W3Y4;
 				ENABLE_PREVIEWS = YES;
