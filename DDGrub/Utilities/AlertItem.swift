@@ -40,7 +40,7 @@ struct AlertContext {
                                             message: Text("You must log into iCloud on your phone in order to utilize DDGrub's Profile. Please log in on your phone's settings screen."),
                                                 dismissButton: .default(Text("OK")))
     
-    static let createProfileSuccess = AlertItem(title: Text("Profile created successfully."),
+    static let createProfileSuccess = AlertItem(title: Text("Profile created successfully!"),
                                             message: Text("Your profile has successfully been created."),
                                                 dismissButton: .default(Text("OK")))
     
@@ -50,5 +50,13 @@ struct AlertContext {
     
     static let unableToGetProfile = AlertItem(title: Text("Unable To Retrieve Profile"),
                                             message: Text("We were unable to retrieve your profile at this time. \nPlease try again later."),
+                                                dismissButton: .default(Text("OK")))
+    
+    static let updateProfileSuccess = AlertItem(title: Text("Profile Update Success!"),
+                                            message: Text("Your DDGrub profile was updated successfully."),
+                                                dismissButton: .default(Text("OK")))
+    
+    static let updateProfileFailure = AlertItem(title: Text("Profile Update Failed"),
+                                            message: Text("We were unable to update your profile at this time. \nPlease try again later."),
                                                 dismissButton: .default(Text("OK")))
 }

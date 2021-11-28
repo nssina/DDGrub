@@ -68,14 +68,25 @@ final class CloudKitManager {
         CKContainer.default().publicCloudDatabase.add(operation)
     }
     
-    func fetchRecord(with id: CKRecord.ID, compledted: @escaping(Result<CKRecord, Error>) -> Void) {
-        CKContainer.default().publicCloudDatabase.fetch(withRecordID: id) { record, error in
+    func save(record: CKRecord, completed: @escaping (Result<CKRecord, Error>) -> Void) {
+        CKContainer.default().publicCloudDatabase.save(record) { record, error in
             guard let record = record, error == nil else {
-                compledted(.failure(error!))
+                completed(.failure(error!))
                 return
             }
             
-            compledted(.success(record))
+            completed(.success(record))
+        }
+    }
+    
+    func fetchRecord(with id: CKRecord.ID, completed: @escaping(Result<CKRecord, Error>) -> Void) {
+        CKContainer.default().publicCloudDatabase.fetch(withRecordID: id) { record, error in
+            guard let record = record, error == nil else {
+                completed(.failure(error!))
+                return
+            }
+            
+            completed(.success(record))
         }
     }
 }
