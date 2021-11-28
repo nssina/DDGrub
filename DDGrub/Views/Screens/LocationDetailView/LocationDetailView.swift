@@ -68,7 +68,16 @@ struct LocationDetailView: View {
             }
             
             if viewModel.isShowingProfileModel {
+                Color(.systemBackground)
+                    .ignoresSafeArea()
+                    .opacity(0.9)
+                    .transition(AnyTransition.opacity.animation(.easeOut(duration: 0.35)))
+                    .zIndex(1)
+                
                 ProfileModalView(isShowingProfileModal: $viewModel.isShowingProfileModel, profile: DDGProfile(record: MockData.profile))
+                    .transition(.opacity.combined(with: .slide))
+                    .animation(.easeOut)
+                    .zIndex(2)
                 
             }
         }
