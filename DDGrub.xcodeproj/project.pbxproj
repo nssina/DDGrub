@@ -32,6 +32,7 @@
 		D33C80F326E5EA7F00905A03 /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80F226E5EA7F00905A03 /* LocationListView.swift */; };
 		D33C80F526E5EA8F00905A03 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80F426E5EA8F00905A03 /* ProfileView.swift */; };
 		D3632B5F27495C59005A7F55 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3632B5E27495C59005A7F55 /* PhotoPicker.swift */; };
+		D3DA4C9D275364C600461E00 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA4C9C275364C600461E00 /* LoadingView.swift */; };
 		D3F33191271887F7000628AD /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F33190271887F7000628AD /* LocationCell.swift */; };
 		D3F331932718881C000628AD /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F331922718881C000628AD /* AvatarView.swift */; };
 		D3F3319527188D05000628AD /* CustomModifires.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3319427188D05000628AD /* CustomModifires.swift */; };
@@ -69,6 +70,7 @@
 		D33C80F226E5EA7F00905A03 /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 		D33C80F426E5EA8F00905A03 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D3632B5E27495C59005A7F55 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		D3DA4C9C275364C600461E00 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		D3F33190271887F7000628AD /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		D3F331922718881C000628AD /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		D3F3319427188D05000628AD /* CustomModifires.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifires.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				D304E4882739A763004D70C5 /* Buttons */,
 				D3F331922718881C000628AD /* AvatarView.swift */,
 				D304E4862739A05D004D70C5 /* LogoView.swift */,
+				D3DA4C9C275364C600461E00 /* LoadingView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				D304E48327398953004D70C5 /* CKAsset+Ext.swift in Sources */,
 				D304E4852739A01F004D70C5 /* OnboardView.swift in Sources */,
 				D3F3319927188DE3000628AD /* DDGButton.swift in Sources */,
+				D3DA4C9D275364C600461E00 /* LoadingView.swift in Sources */,
 				D335EB25274A7A240063D840 /* UIImage+Ext.swift in Sources */,
 				D3F331932718881C000628AD /* AvatarView.swift in Sources */,
 				D33C80ED26E5E9A400905A03 /* Color+Ext.swift in Sources */,
@@ -483,7 +487,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 60;
+				CURRENT_PROJECT_VERSION = 61;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = G5MW59W3Y4;
 				ENABLE_PREVIEWS = YES;
@@ -507,7 +511,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DDGrub/DDGrub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 60;
+				CURRENT_PROJECT_VERSION = 61;
 				DEVELOPMENT_ASSET_PATHS = "\"DDGrub/Preview Content\"";
 				DEVELOPMENT_TEAM = G5MW59W3Y4;
 				ENABLE_PREVIEWS = YES;
