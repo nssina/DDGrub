@@ -35,6 +35,7 @@
 		D3DA4C9D275364C600461E00 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA4C9C275364C600461E00 /* LoadingView.swift */; };
 		D3DA4CA027537EC900461E00 /* LocationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA4C9F27537EC900461E00 /* LocationDetailViewModel.swift */; };
 		D3DA4CA227538A1100461E00 /* ProfileModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA4CA127538A1100461E00 /* ProfileModalView.swift */; };
+		D3DA4CA627552BAB00461E00 /* LocationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA4CA527552BAB00461E00 /* LocationListViewModel.swift */; };
 		D3F33191271887F7000628AD /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F33190271887F7000628AD /* LocationCell.swift */; };
 		D3F331932718881C000628AD /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F331922718881C000628AD /* AvatarView.swift */; };
 		D3F3319527188D05000628AD /* CustomModifires.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3319427188D05000628AD /* CustomModifires.swift */; };
@@ -75,6 +76,7 @@
 		D3DA4C9C275364C600461E00 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		D3DA4C9F27537EC900461E00 /* LocationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewModel.swift; sourceTree = "<group>"; };
 		D3DA4CA127538A1100461E00 /* ProfileModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModalView.swift; sourceTree = "<group>"; };
+		D3DA4CA527552BAB00461E00 /* LocationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewModel.swift; sourceTree = "<group>"; };
 		D3F33190271887F7000628AD /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		D3F331922718881C000628AD /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		D3F3319427188D05000628AD /* CustomModifires.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifires.swift; sourceTree = "<group>"; };
@@ -218,6 +220,16 @@
 			path = LocationDetailView;
 			sourceTree = "<group>";
 		};
+		D3DA4CA427552B8500461E00 /* LocationListView */ = {
+			isa = PBXGroup;
+			children = (
+				D33C80F226E5EA7F00905A03 /* LocationListView.swift */,
+				D3DA4CA527552BAB00461E00 /* LocationListViewModel.swift */,
+				D3F33190271887F7000628AD /* LocationCell.swift */,
+			);
+			path = LocationListView;
+			sourceTree = "<group>";
+		};
 		D3F3319A2718909F000628AD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,7 +247,6 @@
 			children = (
 				D3F3319427188D05000628AD /* CustomModifires.swift */,
 				D3F3319E271890FF000628AD /* Custom Views */,
-				D3F3319D271890F9000628AD /* Cells */,
 				D3F3319C271890BE000628AD /* Screens */,
 			);
 			path = Views;
@@ -244,22 +255,14 @@
 		D3F3319C271890BE000628AD /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D3DA4CA427552B8500461E00 /* LocationListView */,
 				D3DA4C9E27537EB600461E00 /* LocationDetailView */,
 				D33A45122735838600A1854B /* LocationMapView */,
 				D33C80EE26E5EA2700905A03 /* AppTabView.swift */,
-				D33C80F226E5EA7F00905A03 /* LocationListView.swift */,
 				D335EB26274A96020063D840 /* ProfileView */,
 				D304E4842739A01F004D70C5 /* OnboardView.swift */,
 			);
 			path = Screens;
-			sourceTree = "<group>";
-		};
-		D3F3319D271890F9000628AD /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				D3F33190271887F7000628AD /* LocationCell.swift */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		D3F3319E271890FF000628AD /* Custom Views */ = {
@@ -366,6 +369,7 @@
 				D3F33191271887F7000628AD /* LocationCell.swift in Sources */,
 				D3DA4CA227538A1100461E00 /* ProfileModalView.swift in Sources */,
 				D33A450F2735725000A1854B /* CKRecord+Ext.swift in Sources */,
+				D3DA4CA627552BAB00461E00 /* LocationListViewModel.swift in Sources */,
 				D304E48127397CD9004D70C5 /* LocationManager.swift in Sources */,
 				D304E48327398953004D70C5 /* CKAsset+Ext.swift in Sources */,
 				D304E4852739A01F004D70C5 /* OnboardView.swift in Sources */,
