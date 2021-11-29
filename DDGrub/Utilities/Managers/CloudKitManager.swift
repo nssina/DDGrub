@@ -38,7 +38,7 @@ final class CloudKitManager {
         }
     }
     
-    func getLocations(complited: @escaping (Result<[DDGLocation], Error>) -> Void) {
+    func getLocations(completed: @escaping (Result<[DDGLocation], Error>) -> Void) {
         
         let sortDescriptor = NSSortDescriptor(key: DDGLocation.kName, ascending: true)
         let query = CKQuery(recordType: RecordType.location, predicate: NSPredicate(value: true))
@@ -46,7 +46,7 @@ final class CloudKitManager {
         
         CKContainer.default().publicCloudDatabase.perform(query, inZoneWith: nil) { records, error in
             guard error == nil else {
-                complited(.failure(error!))
+                completed(.failure(error!))
                 return
             }
             
@@ -54,20 +54,36 @@ final class CloudKitManager {
             
             let locations = records.map { $0.convertToDDGLocation() }
             
-            complited(.success(locations))
+            completed(.success(locations))
         }
     }
     
-    func batchSave(records: [CKRecord], compledted: @escaping(Result<[CKRecord], Error>) -> Void) {
+        func getCheckedInProfiles(for locationID: CKRecord.ID, completed: @escaping(Result<[DDGProfile], Error>) -> Void) {
+        let refrence = CKRecord.Reference(recordID: locationID, action: .none)
+        let predicate = NSPredicate(format: "isCheckedIn == %@", refrence)
+        let query = CKQuery(recordType: RecordType.profile, predicate: predicate)
+        
+        CKContainer.default().publicCloudDatabase.perform(query, inZoneWith: nil) { records, error in
+            guard let records = records, error == nil else {
+                completed(.failure(error!))
+                return
+            }
+            
+            let profiles = records.map { $0.convertToDDGProfile() }
+            completed(.success(profiles))
+        }
+    }
+    
+    func batchSave(records: [CKRecord], completed: @escaping(Result<[CKRecord], Error>) -> Void) {
         
         let operation = CKModifyRecordsOperation(recordsToSave: records)
         operation.modifyRecordsCompletionBlock = { savedRecords, _, error in
             guard let savedRecords = savedRecords, error == nil else {
-                compledted(.failure(error!))
+                completed(.failure(error!))
                 return
             }
             
-            compledted(.success(savedRecords))
+            completed(.success(savedRecords))
         }
         
         CKContainer.default().publicCloudDatabase.add(operation)

@@ -13,8 +13,10 @@ enum CheckInStatus { case checkedIn, checkedOut }
 
 final class LocationDetailViewModel: ObservableObject {
     
-    @Published var alertItem: AlertItem?
+    @Published var checkedInProfiles: [DDGProfile] = []
     @Published var isShowingProfileModel = false
+    @Published var isCheckedIn = false
+    @Published var alertItem: AlertItem?
     
     let columns = [GridItem(.flexible()),
                    GridItem(.flexible()),
@@ -60,15 +62,39 @@ final class LocationDetailViewModel: ObservableObject {
                 }
                 
                 CloudKitManager.shared.save(record: record) { result in
-                    switch result {
-                    case .success(_):
-                        break
-                    case .failure(_):
-                        break
+                    DispatchQueue.main.async {
+                        switch result {
+                        case .success(let record):
+                            let profile = DDGProfile(record: record)
+                            switch checkInStatus {
+                            case .checkedIn:
+                                checkedInProfiles.append(profile)
+                            case .checkedOut:
+                                checkedInProfiles.removeAll(where: { $0.id == profile.id })
+                            }
+                            
+                            isCheckedIn = checkInStatus == .checkedIn
+                            
+                        case .failure(_):
+                            break
+                        }
                     }
                 }
             case .failure(_):
                 break
+            }
+        }
+    }
+    
+    func getCheckedInProfiles() {
+        CloudKitManager.shared.getCheckedInProfiles(for: location.id) { [self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let profiles):
+                    checkedInProfiles = profiles
+                case .failure(_):
+                    break
+                }
             }
         }
     }
