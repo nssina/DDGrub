@@ -46,9 +46,29 @@ final class LocationDetailViewModel: ObservableObject {
         UIApplication.shared.open(url)
     }
     
+    func getCheckedInStatus() {
+        guard let profileRecordID = CloudKitManager.shared.profileRecordID else { return }
+        
+        CloudKitManager.shared.fetchRecord(with: profileRecordID) { [self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let record):
+                    if let refrence = record[DDGProfile.kIsCheckedIn] as? CKRecord.Reference {
+                        isCheckedIn = refrence.recordID == location.id
+                    } else {
+                        isCheckedIn = false
+                    }
+                case .failure(_):
+                    alertItem = AlertContext.unableToGetCheckStatus
+                }
+            }
+        }
+    }
+    
     func updateCheckInStatus(to checkInStatus: CheckInStatus) {
         
         guard let profileRecordID = CloudKitManager.shared.profileRecordID else {
+            alertItem = AlertContext.unableToGetProfile
             return
         }
         
@@ -77,12 +97,12 @@ final class LocationDetailViewModel: ObservableObject {
                             isCheckedIn = checkInStatus == .checkedIn
                             
                         case .failure(_):
-                            break
+                            alertItem = AlertContext.unableToCheckInOrOut
                         }
                     }
                 }
             case .failure(_):
-                break
+                alertItem = AlertContext.unableToCheckInOrOut
             }
         }
     }
@@ -95,7 +115,7 @@ final class LocationDetailViewModel: ObservableObject {
                 case .success(let profiles):
                     checkedInProfiles = profiles
                 case .failure(_):
-                    break
+                    alertItem = AlertContext.unableToGetCheckedInProfiles
                 }
                 
                 hideLoadingView()
