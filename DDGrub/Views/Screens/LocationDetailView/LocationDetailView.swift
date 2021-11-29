@@ -56,22 +56,27 @@ struct LocationDetailView: View {
                     .bold()
                     .font(.title2)
                 
-                if viewModel.checkedInProfiles.isEmpty {
-                    Text("Nobody's Here 😔")
-                        .bold()
-                        .font(.title2)
-                        .foregroundColor(.secondary)
-                } else {
-                    ScrollView {
-                        LazyVGrid(columns: viewModel.columns) {
-                            ForEach(viewModel.checkedInProfiles) { profile in
-                                FirstNameAvatarView(profile: profile)
-                                    .onTapGesture {
-                                        viewModel.isShowingProfileModel = true
-                                    }
+                ZStack {
+                    if viewModel.checkedInProfiles.isEmpty {
+                        Text("Nobody's Here 😔")
+                            .bold()
+                            .font(.title2)
+                            .foregroundColor(.secondary)
+                            .padding(.top, 30)
+                    } else {
+                        ScrollView {
+                            LazyVGrid(columns: viewModel.columns) {
+                                ForEach(viewModel.checkedInProfiles) { profile in
+                                    FirstNameAvatarView(profile: profile)
+                                        .onTapGesture {
+                                            viewModel.isShowingProfileModel = true
+                                        }
+                                }
                             }
                         }
                     }
+                    
+                    if viewModel.isLoading { LoadingView() }
                 }
                 
                 Spacer()

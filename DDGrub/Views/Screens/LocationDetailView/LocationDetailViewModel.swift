@@ -16,6 +16,7 @@ final class LocationDetailViewModel: ObservableObject {
     @Published var checkedInProfiles: [DDGProfile] = []
     @Published var isShowingProfileModel = false
     @Published var isCheckedIn = false
+    @Published var isLoading = false
     @Published var alertItem: AlertItem?
     
     let columns = [GridItem(.flexible()),
@@ -87,6 +88,7 @@ final class LocationDetailViewModel: ObservableObject {
     }
     
     func getCheckedInProfiles() {
+        showLoadingView()
         CloudKitManager.shared.getCheckedInProfiles(for: location.id) { [self] result in
             DispatchQueue.main.async {
                 switch result {
@@ -95,8 +97,12 @@ final class LocationDetailViewModel: ObservableObject {
                 case .failure(_):
                     break
                 }
+                
+                hideLoadingView()
             }
         }
     }
     
+    private func showLoadingView() { isLoading = true }
+    private func hideLoadingView() { isLoading = false }
 }
