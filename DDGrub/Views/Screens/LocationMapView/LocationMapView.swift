@@ -15,7 +15,12 @@ struct LocationMapView: View {
     var body: some View {
         ZStack {
             Map(coordinateRegion: $viewModel.region, showsUserLocation: true, annotationItems: locationManager.locations) { location in
-                MapMarker(coordinate: location.location.coordinate, tint: .brandPrimary)
+                MapAnnotation(coordinate: location.location.coordinate, anchorPoint: CGPoint(x: 0.5, y: 0.75)) {
+                    DDGAnnotation(location: location)
+                        .onTapGesture {
+                            
+                        }
+                }
             }
             .accentColor(.grubRed)
             .ignoresSafeArea()
