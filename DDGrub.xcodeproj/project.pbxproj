@@ -210,6 +210,13 @@
 			path = "UIKit Components";
 			sourceTree = "<group>";
 		};
+		D37AED14283EA42F00E811E0 /* Map Annotation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Map Annotation";
+			sourceTree = "<group>";
+		};
 		D3DA4C9E27537EB600461E00 /* LocationDetailView */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +275,7 @@
 		D3F3319E271890FF000628AD /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				D37AED14283EA42F00E811E0 /* Map Annotation */,
 				D3632B5D27495C31005A7F55 /* UIKit Components */,
 				D304E4882739A763004D70C5 /* Buttons */,
 				D3F331922718881C000628AD /* AvatarView.swift */,
