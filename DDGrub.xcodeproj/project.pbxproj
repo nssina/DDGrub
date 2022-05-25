@@ -32,6 +32,8 @@
 		D33C80F326E5EA7F00905A03 /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80F226E5EA7F00905A03 /* LocationListView.swift */; };
 		D33C80F526E5EA8F00905A03 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C80F426E5EA8F00905A03 /* ProfileView.swift */; };
 		D3632B5F27495C59005A7F55 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3632B5E27495C59005A7F55 /* PhotoPicker.swift */; };
+		D37AED16283EA47700E811E0 /* MapBalloon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37AED15283EA47700E811E0 /* MapBalloon.swift */; };
+		D37AED18283EB56F00E811E0 /* DDGAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37AED17283EB56F00E811E0 /* DDGAnnotation.swift */; };
 		D3DA4C9D275364C600461E00 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA4C9C275364C600461E00 /* LoadingView.swift */; };
 		D3DA4CA027537EC900461E00 /* LocationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA4C9F27537EC900461E00 /* LocationDetailViewModel.swift */; };
 		D3DA4CA227538A1100461E00 /* ProfileModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA4CA127538A1100461E00 /* ProfileModalView.swift */; };
@@ -73,6 +75,8 @@
 		D33C80F226E5EA7F00905A03 /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 		D33C80F426E5EA8F00905A03 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D3632B5E27495C59005A7F55 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		D37AED15283EA47700E811E0 /* MapBalloon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBalloon.swift; sourceTree = "<group>"; };
+		D37AED17283EB56F00E811E0 /* DDGAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGAnnotation.swift; sourceTree = "<group>"; };
 		D3DA4C9C275364C600461E00 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		D3DA4C9F27537EC900461E00 /* LocationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewModel.swift; sourceTree = "<group>"; };
 		D3DA4CA127538A1100461E00 /* ProfileModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModalView.swift; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 		D37AED14283EA42F00E811E0 /* Map Annotation */ = {
 			isa = PBXGroup;
 			children = (
+				D37AED15283EA47700E811E0 /* MapBalloon.swift */,
+				D37AED17283EB56F00E811E0 /* DDGAnnotation.swift */,
 			);
 			path = "Map Annotation";
 			sourceTree = "<group>";
@@ -376,11 +382,13 @@
 				D3F3319727188D2B000628AD /* View+Ext.swift in Sources */,
 				D3F33191271887F7000628AD /* LocationCell.swift in Sources */,
 				D3DA4CA227538A1100461E00 /* ProfileModalView.swift in Sources */,
+				D37AED18283EB56F00E811E0 /* DDGAnnotation.swift in Sources */,
 				D33A450F2735725000A1854B /* CKRecord+Ext.swift in Sources */,
 				D3DA4CA627552BAB00461E00 /* LocationListViewModel.swift in Sources */,
 				D304E48127397CD9004D70C5 /* LocationManager.swift in Sources */,
 				D304E48327398953004D70C5 /* CKAsset+Ext.swift in Sources */,
 				D304E4852739A01F004D70C5 /* OnboardView.swift in Sources */,
+				D37AED16283EA47700E811E0 /* MapBalloon.swift in Sources */,
 				D3F3319927188DE3000628AD /* DDGButton.swift in Sources */,
 				D3DA4C9D275364C600461E00 /* LoadingView.swift in Sources */,
 				D335EB25274A7A240063D840 /* UIImage+Ext.swift in Sources */,
