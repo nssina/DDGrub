@@ -14,7 +14,6 @@ struct DDGAnnotation: View {
     
     var body: some View {
         VStack {
-            
             ZStack {
                 MapBalloon()
                     .frame(width: 100, height: 70)
@@ -41,6 +40,7 @@ struct DDGAnnotation: View {
                 .font(.caption)
                 .fontWeight(.semibold)
         }
+        .accessibilityLabel(Text("Map Pin \(location.name) \(number) checked in."))
     }
 }
 
