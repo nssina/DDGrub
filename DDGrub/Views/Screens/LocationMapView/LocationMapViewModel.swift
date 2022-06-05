@@ -50,7 +50,7 @@ final class LocationMapViewModel: NSObject, ObservableObject {
         case .restricted:
             alertItem = AlertContext.locationRestricted
         case .denied:
-            alertItem = AlertContext.locationDeined
+            alertItem = AlertContext.locationDenied
         case .authorizedAlways, .authorizedWhenInUse:
             break
         @unknown default:
