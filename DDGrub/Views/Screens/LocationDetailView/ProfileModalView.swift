@@ -27,7 +27,7 @@ struct ProfileModalView: View {
                     .lineLimit(1)
                     .minimumScaleFactor(0.75)
                     .foregroundColor(.secondary)
-                    .accessibilityLabel(Text("Works at: \(profile.companyName)"))
+                    .accessibilityLabel(Text("Works at \(profile.companyName)"))
                 
                 Text(profile.bio)
                     .lineLimit(3)
@@ -39,10 +39,10 @@ struct ProfileModalView: View {
             .cornerRadius(16)
             .overlay(Button {
                 withAnimation { isShowingProfileModal = false }
-                } label: {
-                    XDismissButton()
-                }, alignment: .topTrailing)
-            
+            } label: {
+                XDismissButton()
+            }, alignment: .topTrailing)
+                
             Image(uiImage: profile.createAvatarImage())
                 .resizable()
                 .scaledToFill()
