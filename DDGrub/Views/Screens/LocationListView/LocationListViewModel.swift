@@ -5,8 +5,8 @@
 //  Created by Sina Rabiei on 11/29/21.
 //
 
-import Foundation
 import CloudKit
+import SwiftUI
 
 final class LocationListViewModel: ObservableObject {
     
@@ -16,10 +16,10 @@ final class LocationListViewModel: ObservableObject {
         CloudKitManager.shared.getCheckedInProfilesDictionary { result in
             DispatchQueue.main.async {
                 switch result {
-                case .success(let checkedInProfiles):
-                    self.checkedInProfiles = checkedInProfiles
-                case .failure(_):
-                    break
+                    case .success(let checkedInProfiles):
+                        self.checkedInProfiles = checkedInProfiles
+                    case .failure(_):
+                        print("Error getting back dictionary")
                 }
             }
         }
@@ -29,6 +29,14 @@ final class LocationListViewModel: ObservableObject {
         let count = checkedInProfiles[location.id, default: []].count
         let personPlurality = count == 1 ? "person" : "people"
         
-        return "\(location.name) \(count) \(personPlurality) checked in."
+        return "\(location.name) \(count) \(personPlurality) checked in"
+    }
+    
+    @ViewBuilder func createLocationDetailView(for location: DDGLocation, in sizeCategory: ContentSizeCategory) -> some View {
+        if sizeCategory >= .accessibilityMedium {
+            LocationDetailView(viewModel: LocationDetailViewModel(location: location)).embedInScrollView()
+        } else {
+            LocationDetailView(viewModel: LocationDetailViewModel(location: location))
+        }
     }
 }
