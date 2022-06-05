@@ -26,13 +26,15 @@ struct DDGAnnotation: View {
                     .clipShape(Circle())
                     .offset(y: -11)
                 
-                Text("\(min(number, 99))")
-                    .font(.system(size: 11, weight: .bold))
-                    .frame(width: 26, height: 18)
-                    .background(Color.grubRed)
-                    .foregroundColor(.white)
-                    .clipShape(Capsule())
-                    .offset(x: 20, y: -28)
+                if number > 0 {
+                    Text("\(min(number, 99))")
+                        .font(.system(size: 11, weight: .bold))
+                        .frame(width: 26, height: 18)
+                        .background(Color.grubRed)
+                        .foregroundColor(.white)
+                        .clipShape(Capsule())
+                        .offset(x: 20, y: -28)
+                }
             }
             
             Text(location.name)
