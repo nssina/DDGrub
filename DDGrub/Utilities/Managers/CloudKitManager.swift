@@ -102,6 +102,36 @@ final class CloudKitManager {
         CKContainer.default().publicCloudDatabase.add(operation)
     }
     
+    func getCheckedInProfilesCount(completed: @escaping(Result<[CKRecord.ID: Int], Error>) -> Void) {
+        let predicate = NSPredicate(format: "isCheckedInNilCheck == 1")
+        let query = CKQuery(recordType: RecordType.profile, predicate: predicate)
+        let operation = CKQueryOperation(query: query)
+        operation.desiredKeys = [DDGProfile.kIsCheckedIn]
+        
+        var checkedInProfiles: [CKRecord.ID: Int] = [:]
+        
+        operation.recordFetchedBlock = { record in
+            guard let locationRefrence = record[DDGProfile.kIsCheckedIn] as? CKRecord.Reference else { return }
+            
+            if let count = checkedInProfiles[locationRefrence.recordID] {
+                checkedInProfiles[locationRefrence.recordID] = count + 1
+            } else {
+                checkedInProfiles[locationRefrence.recordID] = 1
+            }
+        }
+        
+        operation.queryCompletionBlock = { cursor, error in
+            guard error == nil else {
+                completed(.failure(error!))
+                return
+            }
+            
+            completed(.success(checkedInProfiles))
+        }
+        
+        CKContainer.default().publicCloudDatabase.add(operation)
+    }
+    
     func batchSave(records: [CKRecord], completed: @escaping(Result<[CKRecord], Error>) -> Void) {
         
         let operation = CKModifyRecordsOperation(recordsToSave: records)
