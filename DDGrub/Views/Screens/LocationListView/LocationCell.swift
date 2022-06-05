@@ -35,8 +35,12 @@ struct LocationCell: View {
                         .padding(.top, 2)
                 } else {
                     HStack {
-                        ForEach(profiles) { profile in
-                            AvatarView(image: profile.createAvatarImage(), size: 35)
+                        ForEach(profiles.indices, id: \.self) { index in
+                            if index <= 3 {
+                                AvatarView(image: profiles[index].createAvatarImage(), size: 35)
+                            } else if index == 4 {
+                                AdditionalProfilesView(number: profiles.count - 4)
+                            }
                         }
                     }
                 }
@@ -45,9 +49,24 @@ struct LocationCell: View {
         }
     }
 }
+
 struct LocationCell_Previews: PreviewProvider {
     static var previews: some View {
-        LocationCell(location: DDGLocation(record: MockData.location),
-                     profiles: [])
+        LocationCell(location: DDGLocation(record: MockData.location), profiles: [])
+    }
+}
+
+
+fileprivate struct AdditionalProfilesView: View {
+    
+    var number: Int
+    
+    var body: some View {
+        Text("+\(number)")
+            .font(.system(size: 14, weight: .semibold))
+            .frame(width: 35, height: 35)
+            .foregroundColor(.white)
+            .background(Color.brandPrimary)
+            .clipShape(Circle())
     }
 }
