@@ -5,6 +5,7 @@
 //  Created by Sina Rabiei on 9/6/21.
 //
 
+import CoreLocationUI
 import SwiftUI
 import MapKit
 
@@ -12,7 +13,7 @@ struct LocationMapView: View {
     
     @EnvironmentObject private var locationManager: LocationManager
     @StateObject private var viewModel = LocationMapViewModel()
-    @Environment(\.sizeCategory) var sizeCategory
+    @Environment(\.dynamicTypeSize) var dynamicTypeSize
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -33,13 +34,23 @@ struct LocationMapView: View {
         }
         .sheet(isPresented: $viewModel.isShowingDetailView) {
             NavigationView {
-                viewModel.createLocationDetailView(for: locationManager.selectedLocation!, in: sizeCategory)
+                viewModel.createLocationDetailView(for: locationManager.selectedLocation!, in: dynamicTypeSize)
                     .toolbar { Button("Dismiss", action: { viewModel.isShowingDetailView = false }) }
             }
-            .accentColor(.brandPrimary)
+        }
+        .overlay(alignment: .bottomLeading) {
+            LocationButton(.currentLocation) {
+                viewModel.requestAllowOnceLocationPermission()
+            }
+            .foregroundColor(.white)
+            .symbolVariant(.fill)
+            .tint(.grubRed)
+            .labelStyle(.iconOnly)
+            .clipShape(Circle())
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 40, trailing: 0))
         }
         .alert(item: $viewModel.alertItem, content: { $0.alert })
-        .onAppear {
+        .task {
             if locationManager.locations.isEmpty { viewModel.getLocations(for: locationManager) }
             viewModel.getCheckedInCounts()
         }
