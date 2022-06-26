@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MapBalloon: Shape {
+    
     func path(in rect: CGRect) -> Path {
         var path = Path()
         path.move(to: CGPoint(x: rect.midX, y: rect.maxY))
@@ -21,5 +22,7 @@ struct MapBalloon: Shape {
 struct MapBalloon_Previews: PreviewProvider {
     static var previews: some View {
         MapBalloon()
+            .frame(width: 300, height: 240)
+            .foregroundColor(.brandPrimary)
     }
 }
