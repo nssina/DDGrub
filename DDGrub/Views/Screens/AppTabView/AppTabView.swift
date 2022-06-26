@@ -22,12 +22,11 @@ struct AppTabView: View {
             NavigationView { ProfileView() }
                 .tabItem { Label("Profile", systemImage: "person") }
         }
-        .onAppear {
-            CloudKitManager.shared.getUserRecord()
-            viewModel.runStartupChecks()
+        .task {
+            try? await CloudKitManager.shared.getUserRecord()
+            viewModel.checkIfHasSeenOnboard()
         }
-        .accentColor(.brandPrimary)
-        .sheet(isPresented: $viewModel.isShowingOnboardView, onDismiss: viewModel.checkIfLocationServicesIsEnabled) {
+        .sheet(isPresented: $viewModel.isShowingOnboardView) {
             OnboardView()
         }
     }
