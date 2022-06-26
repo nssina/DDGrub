@@ -36,6 +36,7 @@
 		D364F2C1284D34EB0006424A /* ProfileSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364F2C0284D34EB0006424A /* ProfileSheetView.swift */; };
 		D37AED16283EA47700E811E0 /* MapBalloon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37AED15283EA47700E811E0 /* MapBalloon.swift */; };
 		D37AED18283EB56F00E811E0 /* DDGAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37AED17283EB56F00E811E0 /* DDGAnnotation.swift */; };
+		D38BA6E72868D69A00FC5A05 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38BA6E62868D69A00FC5A05 /* HapticManager.swift */; };
 		D3DA4C9D275364C600461E00 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA4C9C275364C600461E00 /* LoadingView.swift */; };
 		D3DA4CA027537EC900461E00 /* LocationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA4C9F27537EC900461E00 /* LocationDetailViewModel.swift */; };
 		D3DA4CA227538A1100461E00 /* ProfileModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA4CA127538A1100461E00 /* ProfileModalView.swift */; };
@@ -81,6 +82,7 @@
 		D364F2C0284D34EB0006424A /* ProfileSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSheetView.swift; sourceTree = "<group>"; };
 		D37AED15283EA47700E811E0 /* MapBalloon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBalloon.swift; sourceTree = "<group>"; };
 		D37AED17283EB56F00E811E0 /* DDGAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGAnnotation.swift; sourceTree = "<group>"; };
+		D38BA6E62868D69A00FC5A05 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		D3DA4C9C275364C600461E00 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		D3DA4C9F27537EC900461E00 /* LocationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewModel.swift; sourceTree = "<group>"; };
 		D3DA4CA127538A1100461E00 /* ProfileModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModalView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				D33A450A27356B3F00A1854B /* CloudKitManager.swift */,
+				D38BA6E62868D69A00FC5A05 /* HapticManager.swift */,
 				D304E48027397CD9004D70C5 /* LocationManager.swift */,
 			);
 			path = Managers;
@@ -379,6 +382,7 @@
 				D33C80F126E5EA6200905A03 /* LocationMapView.swift in Sources */,
 				D33C80F326E5EA7F00905A03 /* LocationListView.swift in Sources */,
 				D3DA4CA027537EC900461E00 /* LocationDetailViewModel.swift in Sources */,
+				D38BA6E72868D69A00FC5A05 /* HapticManager.swift in Sources */,
 				D33A4514273583B100A1854B /* LocationMapViewModel.swift in Sources */,
 				D3F3319527188D05000628AD /* CustomModifires.swift in Sources */,
 				D335EB28274A96220063D840 /* ProfileViewModel.swift in Sources */,
