@@ -21,12 +21,14 @@ struct ProfileModalView: View {
                     .font(.title2)
                     .lineLimit(1)
                     .minimumScaleFactor(0.75)
+                    .padding(.horizontal)
                 
                 Text(profile.companyName)
                     .fontWeight(.semibold)
                     .lineLimit(1)
                     .minimumScaleFactor(0.75)
                     .foregroundColor(.secondary)
+                    .padding(.horizontal)
                     .accessibilityLabel(Text("Works at \(profile.companyName)"))
                 
                 Text(profile.bio)
@@ -37,13 +39,15 @@ struct ProfileModalView: View {
             .frame(width: 300, height: 230)
             .background(Color(.secondarySystemBackground))
             .cornerRadius(16)
-            .overlay(Button {
-                withAnimation { isShowingProfileModal = false }
-            } label: {
-                XDismissButton()
-            }, alignment: .topTrailing)
+            .overlay(alignment: .topTrailing) {
+                Button {
+                    withAnimation { isShowingProfileModal = false }
+                } label: {
+                    XDismissButton()
+                }
+            }
                 
-            Image(uiImage: profile.createAvatarImage())
+            Image(uiImage: profile.avatarImage)
                 .resizable()
                 .scaledToFill()
                 .frame(width: 110, height: 110)
@@ -52,6 +56,8 @@ struct ProfileModalView: View {
                 .offset(y: -120)
                 .accessibilityHidden(true)
         }
+        .transition(.opacity.combined(with: .slide))
+        .zIndex(2)
     }
 }
 
